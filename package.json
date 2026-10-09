@@ -7,6 +7,7 @@
     "check": "rs check --type-check",
     "fmt": "rs fmt",
     "lint": "rs lint --type-check",
+    "publish": "pnpm check && pnpm test && pnpm -r publish --access public",
     "test": "pnpm build && FORCE_COLOR=1 pnpm -r test"
   },
   "devDependencies": {
