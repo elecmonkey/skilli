@@ -1,0 +1,36 @@
+{
+  "name": "@skilli/plugin-vite",
+  "version": "0.1.0",
+  "description": "Build and distribute Agent Skills with Vite.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rs lib",
+    "test": "rs test"
+  },
+  "dependencies": {
+    "skilli": "workspace:^"
+  },
+  "devDependencies": {
+    "rstack": "catalog:",
+    "vite": "catalog:"
+  },
+  "peerDependencies": {
+    "vite": "catalog:peers"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

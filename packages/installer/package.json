@@ -1,0 +1,22 @@
+{
+  "name": "@skilli/installer",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "test": "rs test"
+  },
+  "dependencies": {
+    "@clack/prompts": "catalog:"
+  },
+  "devDependencies": {
+    "rstack": "catalog:",
+    "skilli": "workspace:^",
+    "tar": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  }
+}

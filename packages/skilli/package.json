@@ -1,0 +1,37 @@
+{
+  "name": "skilli",
+  "version": "0.1.0",
+  "description": "Bundle a CLI and Agent Skill into an npx-installable package.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "skilli": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rs lib",
+    "test": "rs test"
+  },
+  "dependencies": {
+    "esbuild": "catalog:",
+    "tar": "catalog:",
+    "yaml": "catalog:"
+  },
+  "devDependencies": {
+    "rstack": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

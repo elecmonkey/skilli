@@ -1,0 +1,35 @@
+{
+  "name": "@skilli/plugin-rsbuild",
+  "version": "0.1.0",
+  "description": "Build and distribute Agent Skills with Rsbuild.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rs lib",
+    "test": "rs test"
+  },
+  "dependencies": {
+    "skilli": "workspace:^"
+  },
+  "devDependencies": {
+    "rstack": "catalog:"
+  },
+  "peerDependencies": {
+    "@rsbuild/core": "catalog:peers"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

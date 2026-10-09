@@ -1,0 +1,20 @@
+{
+  "name": "skilli-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "FORCE_COLOR=1 pnpm -r build",
+    "check": "rs check --type-check",
+    "fmt": "rs fmt",
+    "lint": "rs lint --type-check",
+    "test": "pnpm build && FORCE_COLOR=1 pnpm -r test"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "rstack": "catalog:"
+  },
+  "packageManager": "pnpm@12.10.1",
+  "engines": {
+    "node": ">=24.3.0"
+  }
+}
