@@ -2,6 +2,11 @@
   "name": "skilli",
   "version": "0.1.0",
   "description": "Bundle a CLI and Agent Skill into an npx-installable package.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elecmonkey/skilli.git",
+    "directory": "packages/skilli"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {

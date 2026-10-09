@@ -2,6 +2,11 @@
   "name": "@skilli/plugin-vite",
   "version": "0.1.0",
   "description": "Build and distribute Agent Skills with Vite.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elecmonkey/skilli.git",
+    "directory": "packages/plugin-vite"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {

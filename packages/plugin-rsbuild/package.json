@@ -2,6 +2,11 @@
   "name": "@skilli/plugin-rsbuild",
   "version": "0.1.0",
   "description": "Build and distribute Agent Skills with Rsbuild.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elecmonkey/skilli.git",
+    "directory": "packages/plugin-rsbuild"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {

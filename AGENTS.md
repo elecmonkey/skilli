@@ -23,6 +23,7 @@ A SKILL with CLI is an application's second frontend. This pnpm monorepo package
 
 ## Scope and publishing
 
+- Before preparing a release or changing publishing workflows, read [the release skill](.agents/skills/skilli-release/SKILL.md).
 - Investigation and explanation requests authorize read-only work; wait for an explicit request before editing.
 - Do not commit generated `dist` files or `.tgz` archives.
 - Editing, committing, and external publishing require separate authorization. Never push, publish, or write to an external service as the user without explicit authorization for the action and target.
