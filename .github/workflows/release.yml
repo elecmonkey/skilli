@@ -158,3 +158,29 @@ jobs:
               }
               core.info(`${ref} already exists at ${sha}.`);
             }
+
+      - name: Create GitHub Release
+        uses: actions/github-script@v9
+        env:
+          RELEASE_SHA: ${{ steps.pr.outputs.sha }}
+          RELEASE_VERSION: ${{ steps.version.outputs.version }}
+        with:
+          script: |
+            const version = process.env.RELEASE_VERSION;
+            const tag = `v${version}`;
+            try {
+              await github.rest.repos.getReleaseByTag({ ...context.repo, tag });
+              core.info(`Release ${tag} already exists.`);
+              return;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+            const { data: release } = await github.rest.repos.createRelease({
+              ...context.repo,
+              tag_name: tag,
+              target_commitish: process.env.RELEASE_SHA,
+              name: tag,
+              draft: false,
+              prerelease: version.includes('-'),
+            });
+            core.info(`Created ${release.html_url}.`);
