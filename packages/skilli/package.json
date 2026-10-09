@@ -1,6 +1,6 @@
 {
   "name": "skilli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bundle a CLI and Agent Skill into an npx-installable package.",
   "repository": {
     "type": "git",

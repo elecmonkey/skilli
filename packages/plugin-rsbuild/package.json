@@ -1,6 +1,6 @@
 {
   "name": "@skilli/plugin-rsbuild",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build and distribute Agent Skills with Rsbuild.",
   "repository": {
     "type": "git",
