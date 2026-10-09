@@ -19,3 +19,25 @@ Keep all six packages on the same version: `skilli`, `@skilli/installer`, `@skil
 Stable versions use the npm tag `latest`; `alpha`, `beta`, and `rc` versions use their corresponding tags. Other prereleases use `next`.
 
 Retry failed releases using the same commit and version. Code changes after publishing require a new version.
+
+## Release notes
+
+Summarize user-facing changes since the previous release, ending at the published tag. Review the complete commit history in that range, including direct commits without PRs; for the first release, review history up to the published tag. Write in English using this exact section order and bullet format; omit empty sections and routine release chores. Describe new capabilities under Features, corrected behavior under Bug Fixes, and incompatible changes with migration instructions under Breaking Changes.
+
+```md
+## Breaking Changes
+
+- <Incompatible change>. Migration: <required action>. ([#123](https://github.com/elecmonkey/skilli/pull/123))
+
+## Features
+
+- <New capability and its use>. ([#124](https://github.com/elecmonkey/skilli/pull/124))
+
+## Bug Fixes
+
+- <Affected scenario and corrected behavior>. ([#125](https://github.com/elecmonkey/skilli/pull/125))
+
+**Full Changelog**: https://github.com/elecmonkey/skilli/compare/v<previous>...v<current>
+```
+
+Use one concise bullet per change. Link to its PR when available; otherwise use `([<short SHA>](https://github.com/elecmonkey/skilli/commit/<full SHA>))`. Include each change once, even when both PR and commit records describe it. Do not add emojis, introductory paragraphs, or extra sections. For the first release, omit Full Changelog if there is no previous tag.
