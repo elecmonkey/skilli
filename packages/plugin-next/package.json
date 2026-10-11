@@ -1,0 +1,46 @@
+{
+  "name": "@skilli/plugin-next",
+  "version": "0.1.2",
+  "description": "Build and distribute Agent Skills with Next.js.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elecmonkey/skilli.git",
+    "directory": "packages/plugin-next"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rs lib",
+    "test": "rs test"
+  },
+  "dependencies": {
+    "skilli": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "rstack": "catalog:",
+    "tar": "catalog:"
+  },
+  "peerDependencies": {
+    "next": "catalog:peers"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
