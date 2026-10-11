@@ -1,9 +1,7 @@
 packages:
   - packages/*
-
 allowBuilds:
   esbuild: true
-
 catalog:
   '@clack/prompts': ^1.8.1
   '@types/node': ^24.19.1
@@ -12,8 +10,10 @@ catalog:
   tar: ^7.5.22
   vite: ^8.3.4
   yaml: ^2.9.1
-
+  astro: ^7.3.8
+  '@astrojs/node': ^11.1.7
 catalogs:
   peers:
     '@rsbuild/core': '>=1.4.8 <3'
     vite: '>=6 <9'
+    astro: '>=7.3.8 <8'
