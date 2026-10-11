@@ -1,9 +1,7 @@
 packages:
   - packages/*
-
 allowBuilds:
   esbuild: true
-
 catalog:
   '@clack/prompts': ^1.8.1
   '@types/node': ^24.19.1
@@ -12,8 +10,13 @@ catalog:
   tar: ^7.5.22
   vite: ^8.3.4
   yaml: ^2.9.1
-
+  next: ^16.4.0
+  react: ^19.3.0
+  react-dom: ^19.3.0
+  '@types/react': ^19.3.0
+  '@types/react-dom': ^19.3.0
 catalogs:
   peers:
     '@rsbuild/core': '>=1.4.8 <3'
     vite: '>=6 <9'
+    next: '>=16 <17'
