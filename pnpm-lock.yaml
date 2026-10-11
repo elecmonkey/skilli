@@ -167,6 +167,9 @@ catalogs:
     '@clack/prompts':
       specifier: ^1.8.1
       version: 1.8.1
+    '@rspack/core':
+      specifier: ^2.2.8
+      version: 2.2.8
     '@types/node':
       specifier: ^24.19.1
       version: 24.19.1
@@ -229,6 +232,22 @@ importers:
       rstack:
         specifier: 'catalog:'
         version: 0.8.1(typescript@6.0.3)
+
+  packages/plugin-rspack:
+    dependencies:
+      skilli:
+        specifier: workspace:^
+        version: link:../skilli
+    devDependencies:
+      '@rspack/core':
+        specifier: 'catalog:'
+        version: 2.2.8(@swc/helpers@0.5.23)
+      rstack:
+        specifier: 'catalog:'
+        version: 0.8.1(typescript@6.0.3)
+      tar:
+        specifier: 'catalog:'
+        version: 7.5.22
 
   packages/plugin-vite:
     dependencies:
