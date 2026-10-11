@@ -216,6 +216,24 @@ importers:
         specifier: 'catalog:'
         version: 0.8.1(jiti@2.7.0)(typescript@6.0.3)
 
+  examples/rsbuild-project:
+    devDependencies:
+      '@skilli/plugin-rsbuild':
+        specifier: workspace:^
+        version: link:../../packages/plugin-rsbuild
+      rstack:
+        specifier: 'catalog:'
+        version: 0.8.1(typescript@6.0.3)
+
+  examples/vite-project:
+    devDependencies:
+      '@skilli/plugin-vite':
+        specifier: workspace:^
+        version: link:../../packages/plugin-vite
+      vite:
+        specifier: 'catalog:'
+        version: 8.3.4(@types/node@24.19.1)(esbuild@0.28.2)(yaml@2.9.1)
+
   packages/installer:
     dependencies:
       '@clack/prompts':

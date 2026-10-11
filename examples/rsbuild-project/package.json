@@ -1,0 +1,17 @@
+{
+  "name": "@skilli/example-rsbuild",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rs build",
+    "dev": "rs dev",
+    "preview": "rs preview"
+  },
+  "devDependencies": {
+    "@skilli/plugin-rsbuild": "workspace:^",
+    "rstack": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  }
+}

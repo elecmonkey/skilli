@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skilli Vite example</title>
+  </head>
+  <body>
+    <main>
+      <h1>One application, two frontends</h1>
+      <form>
+        <label for="name">Your name</label>
+        <input id="name" name="name" value="world" />
+        <button type="submit">Say hello</button>
+        <output id="greeting">Hello, world!</output>
+      </form>
+      <h2>Use the same app through an Agent Skill</h2>
+      <label for="install-command"
+        >Copy this command to install the Skill</label
+      >
+      <input id="install-command" readonly size="80" />
+      <p><a id="download" download>Download the installer</a></p>
+    </main>
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
