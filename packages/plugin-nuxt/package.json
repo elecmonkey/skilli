@@ -1,0 +1,44 @@
+{
+  "name": "@skilli/plugin-nuxt",
+  "version": "0.1.2",
+  "description": "Build and distribute Agent Skills with Nuxt.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elecmonkey/skilli.git",
+    "directory": "packages/plugin-nuxt"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rs lib",
+    "test": "rs test"
+  },
+  "dependencies": {
+    "@nuxt/kit": "catalog:",
+    "@nuxt/schema": "catalog:",
+    "skilli": "workspace:^"
+  },
+  "devDependencies": {
+    "nuxt": "catalog:",
+    "rstack": "catalog:",
+    "tar": "catalog:"
+  },
+  "peerDependencies": {
+    "nuxt": "catalog:peers"
+  },
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

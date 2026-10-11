@@ -27,6 +27,8 @@ npx -y https://example.com/downloads/my-agent-installer.tgz
 
 Use [@skilli/plugin-rsbuild](packages/plugin-rsbuild/README.md) or [@skilli/plugin-vite](packages/plugin-vite/README.md) to generate the archive during your website build. See [skilli](packages/skilli/README.md) for packaging and installation options.
 
+Use [@skilli/plugin-nuxt](packages/plugin-nuxt/README.md) to generate the archive during Nuxt builds and static generation.
+
 ## License
 
 MIT

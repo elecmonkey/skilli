@@ -12,8 +12,12 @@ catalog:
   yaml: ^2.9.1
   astro: ^7.3.8
   '@astrojs/node': ^11.1.7
+  '@nuxt/kit': ^4.6.1
+  '@nuxt/schema': ^4.6.1
+  nuxt: ^4.6.1
 catalogs:
   peers:
     '@rsbuild/core': '>=1.4.8 <3'
     vite: '>=6 <9'
     astro: '>=7.3.8 <8'
+    nuxt: '>=4.6.1 <5'
