@@ -14,11 +14,9 @@ export default defineNuxtConfig({
 });
 ```
 
-The module runs during production builds and static generation. It packages the Skill before Nitro prerenders or copies public assets, so the archive is included in the deployed `.output/public` directory. Development does not generate an archive or install a Skill. Inputs resolve relative to Nuxt's `rootDir`, or the explicit `root` option. The default filename is `downloads/skill-installer.tgz`. See `skilli` for the shared packaging options.
+Runs during production builds and static generation, including the archive in Nitro's public output. Inputs resolve relative to Nuxt's `rootDir`, or the explicit `root` option. The default filename is `downloads/skill-installer.tgz`. Requires Nuxt `>=4.6.1 <5`, Node.js 24.15.0+, and Nitro public assets enabled. See [skilli](../skilli/README.md) for shared packaging options.
 
-Requires Nuxt 4.6.1 or later within Nuxt 4 and Node.js 24.15.0 or later. Nitro public assets must be enabled.
-
-Keep `filename` relative to the public output, without the deployment base path. Build the installation URL using Nuxt's configured base URL, including on nested routes:
+Keep `filename` relative to the public output. In browser code, use Nuxt's base URL to create the installation command:
 
 ```ts
 const { app } = useRuntimeConfig();
@@ -30,4 +28,4 @@ const installerUrl = new URL(
 const installCommand = `npx -y ${installerUrl.href}`;
 ```
 
-Use an absolute pathname such as `/app/` for `app.baseURL`. When using `app.cdnURL`, upload the public output, including the installer archive, to that CDN prefix. The URL example belongs in browser code or a client event handler, where `window` is available.
+Use an absolute pathname such as `/app/` for `app.baseURL`. When using `app.cdnURL`, upload the public output, including the installer, to that prefix.
