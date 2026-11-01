@@ -1,6 +1,6 @@
 {
   "name": "@skilli/plugin-nuxt",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build and distribute Agent Skills with Nuxt.",
   "repository": {
     "type": "git",

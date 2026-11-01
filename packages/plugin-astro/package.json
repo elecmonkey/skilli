@@ -1,6 +1,6 @@
 {
   "name": "@skilli/plugin-astro",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build and distribute Agent Skills with Astro.",
   "repository": {
     "type": "git",
