@@ -71,13 +71,13 @@ jobs:
           import { readFileSync, appendFileSync } from 'node:fs';
           import { spawnSync } from 'node:child_process';
 
-          const directories = ['skilli', 'installer', 'plugin-vite', 'plugin-rsbuild'];
+          const directories = ['skilli', 'installer', 'plugin-vite', 'plugin-rsbuild', 'plugin-astro'];
           const manifests = directories.map((directory) =>
             JSON.parse(readFileSync(`packages/${directory}/package.json`, 'utf8')));
           const version = manifests[0].version;
           const match = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?$/.exec(version);
           if (!match || manifests.some((manifest) => manifest.version !== version)) {
-            throw new Error('All four packages must share one valid release version.');
+            throw new Error('All five packages must share one valid release version.');
           }
           for (const manifest of manifests.filter((manifest) => !manifest.private)) {
             const result = spawnSync('npm', ['view', `${manifest.name}@${version}`, '--json'], {

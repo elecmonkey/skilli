@@ -1,0 +1,44 @@
+{
+  "name": "@skilli/plugin-astro",
+  "version": "0.1.2",
+  "description": "Build and distribute Agent Skills with Astro.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elecmonkey/skilli.git",
+    "directory": "packages/plugin-astro"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rs lib",
+    "test": "rs test"
+  },
+  "dependencies": {
+    "@skilli/plugin-vite": "workspace:^",
+    "skilli": "workspace:^"
+  },
+  "devDependencies": {
+    "@astrojs/node": "catalog:",
+    "astro": "catalog:",
+    "rstack": "catalog:",
+    "tar": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:peers"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
