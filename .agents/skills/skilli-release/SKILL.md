@@ -7,9 +7,9 @@ description: Prepare a Skilli release PR, publish its fixed commit through GitHu
 
 Read `.github/workflows/release.yml` and follow the authorization rules in `AGENTS.md`.
 
-Keep all five packages on the same version: `skilli`, `@skilli/installer`, `@skilli/plugin-vite`, `@skilli/plugin-rsbuild`, and `@skilli/plugin-astro`. The installer remains private and is bundled into skilli. New packages start at the current shared version; `@skilli/plugin-astro` initially uses `0.1.2`. When adding a package, update this list and the release workflow's version-validation list together.
+Keep all six packages on the same version: `skilli`, `@skilli/installer`, `@skilli/plugin-vite`, `@skilli/plugin-rsbuild`, `@skilli/plugin-astro`, and `@skilli/plugin-nuxt`. The installer remains private and is bundled into skilli. New packages start at the current shared version; `@skilli/plugin-astro` and `@skilli/plugin-nuxt` initially use `0.1.2`. When adding a package, update this list and the release workflow's version-validation list together.
 
-1. Determine the next version from the user’s requested `patch`, `minor`, or `major` bump, or use their explicit target version. Create branch `release/v<version>` and update all five package versions, including `@skilli/plugin-astro`.
+1. Determine the next version from the user’s requested `patch`, `minor`, or `major` bump, or use their explicit target version. Create branch `release/v<version>` and update all six package versions, including `@skilli/plugin-astro` and `@skilli/plugin-nuxt`.
 2. Run `pnpm test` and `pnpm check`.
 3. Open a PR to `main` from that branch in `elecmonkey/skilli`, titled `chore: release v<version>`, and wait for CI and review.
 4. For a new public package, publish its first version locally from the fixed, validated release PR commit using `pnpm --filter <package-name> publish --access public --no-git-checks --tag <dist-tag>`. Then configure npm trusted publishing for this repository's `release.yml` workflow. Obtain explicit authorization for each external action before publishing or changing npm settings.
